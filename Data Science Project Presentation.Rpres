@@ -1,0 +1,37 @@
+Data Science Project Presentation
+========================================================
+Predicting miles per gallon (MPG) with a simple linear model
+
+The Data
+========================================================
+
+I used the `mtcars` dataset in R to build my predictive model.
+
+```{r}
+str(mtcars)
+```
+
+The Model
+========================================================
+
+For simplicity, I build a linear regression model using the three most correlated variables to `mpg`-`cyl`,`disp`, and `wt`. 
+
+```{r}
+train<-lm(mpg~cyl+disp+wt,data=mtcars)
+summary(train)
+```
+
+Why this App might be useful
+========================================================
+
+-Considering which car to buy if you care about MPG and are able to obtain the specs for the variables that are input in to the model.
+
+-Seeing if your car gets the MPG it should.
+
+-The design of this app could be easily replicated for any predictive model.
+
+Give it A Try!
+========================================================
+![App Screenshot](DataApp.PNG)
+
+[Here](https://dannygj.shinyapps.io/Tabs/) is a link to the app.
